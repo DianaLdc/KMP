@@ -1,0 +1,48 @@
+ 
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Buscador KMP</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-container">
+    <h1 class="title"> Buscador y resaltador con KMP</h1>
+    <p class="subtitle">Busca una palabra o frase dentro del texto usando el algoritmo Knuth–Morris–Pratt (KMP).</p>
+
+    <div class="card">
+      <label>Texto:</label>
+      <textarea id="textInput" placeholder="Escribe o pega aquí el texto...">En un lugar de la Mancha, de cuyo nombre no quiero acordarme. En un lugar de la Mancha...</textarea>
+
+      <label>Patrón a buscar:</label>
+      <input id="patternInput" type="text" value="lugar de la Mancha" placeholder="Ejemplo: lugar de la Mancha">
+
+      <div class="options">
+        <label><input type="checkbox" id="caseSensitive"> Sensible a mayúsculas/minúsculas</label>
+      </div>
+
+      <div class="buttons">
+        <button id="searchBtn">Buscar</button>
+        <button id="clearBtn" class="secondary">Limpiar</button>
+      </div>
+    </div>
+
+    <div id="output" class="output">
+      <h2>Resultados</h2>
+      <p id="meta">Esperando búsqueda...</p>
+      <div id="resultText" class="result-text"></div>
+      <p id="positions" class="positions"></p>
+    </div>
+  </div>
+
+  <footer>
+    <p>Hecho con JavaScript — Proyecto KMP</p>
+  </footer>
+
+  <!-- Se cargan los scripts en orden -->
+  <script src="kmp.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
